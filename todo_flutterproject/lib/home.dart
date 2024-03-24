@@ -52,32 +52,38 @@ class _homeState extends State<home> {
           );
         },
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(8.0, 15.0, 8.0, 15.0),
-        child: Container(
-          decoration: const BoxDecoration(
-              //shape: BoxShape.circle,
+      // bottomNavigationBar: Padding(
+      //   padding: const EdgeInsets.fromLTRB(8.0, 15.0, 8.0, 15.0),
+      //   child: Container(
+      //     decoration: const BoxDecoration(
+      //         //shape: BoxShape.circle,
 
-              ),
-          child: IconButton(
-            icon: const Icon(
-              Icons.add,
-              color: Colors.white,
-            ),
-            style: IconButton.styleFrom(
-              minimumSize: const Size.fromHeight(50),
-              backgroundColor: const Color.fromARGB(255, 202, 176, 229),
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-              ),
-            ),
-            onPressed: () {
-              _addNavigation(context);
-              /**Navigator.of(context).pushNamed('/add');**/
-            },
-            iconSize: 30,
-          ),
-        ),
+      //         ),
+      //     child: IconButton(
+      //       icon: const Icon(
+      //         Icons.add,
+      //         color: Colors.white,
+      //       ),
+      //       style: IconButton.styleFrom(
+      //         minimumSize: const Size.fromHeight(50),
+      //         backgroundColor: const Color.fromARGB(255, 202, 176, 229),
+      //         shape: const RoundedRectangleBorder(
+      //           borderRadius: BorderRadius.all(Radius.circular(10)),
+      //         ),
+      //       ),
+      //       onPressed: () {
+      //         _addNavigation(context);
+      //         /**Navigator.of(context).pushNamed('/add');**/
+      //       },
+      //       iconSize: 30,
+      //     ),
+      //   ),
+      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _addNavigation(context);
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -98,8 +104,8 @@ class TodoList extends StatelessWidget {
         //color: const Color.fromARGB(255, 244, 244, 244),
         decoration: BoxDecoration(
             border: Border.all(
-          width: 1.2,
-          color: const Color.fromARGB(255, 170, 129, 214),
+          width: 2,
+          color: const Color.fromARGB(255, 206, 185, 229),
         )),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -108,7 +114,7 @@ class TodoList extends StatelessWidget {
             Text(
               todo,
               style: const TextStyle(
-                fontSize: 25,
+                fontSize: 22,
               ),
             ),
             IconButton(

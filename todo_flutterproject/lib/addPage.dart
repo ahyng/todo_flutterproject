@@ -24,8 +24,9 @@ class addList extends StatelessWidget {
               height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(5.0),
               child: TextField(
+                autofocus: true,
                 controller: controller,
                 keyboardType: TextInputType.text,
                 decoration: const InputDecoration(
