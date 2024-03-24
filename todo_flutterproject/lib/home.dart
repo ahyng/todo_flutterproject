@@ -14,8 +14,6 @@ class _homeState extends State<home> {
   @override
   void initState() {
     super.initState();
-    todoList.add('안녕');
-    todoList.add('todos');
   }
 
   void _addNavigation(BuildContext context) async {
