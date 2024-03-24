@@ -5,6 +5,7 @@ class addList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController controller = TextEditingController();
     return Scaffold(
         appBar: AppBar(
           title: const Text(
@@ -22,10 +23,12 @@ class addList extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: TextField(
-                decoration: InputDecoration(
+                controller: controller,
+                keyboardType: TextInputType.text,
+                decoration: const InputDecoration(
                     focusedBorder: OutlineInputBorder(),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -40,7 +43,9 @@ class addList extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(8.0, 2.0, 8.0, 2.0),
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop(controller.value.text);
+                  },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size.fromHeight(50),
                     shape: const RoundedRectangleBorder(
